@@ -21,7 +21,7 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37373f; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #7b1315; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #7b1315; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -76,7 +76,12 @@ a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
   text-decoration: none;
 }
-
+h2{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: var(--default-font);
+}
 h1,
 h2,
 h3,
@@ -1655,6 +1660,34 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+
+/* Default styles for all devices */
+.image-to-show {
+  display: block; /* Show by default */
+}
+
+.image-to-hide {
+  display: block; /* Show by default */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .image-to-show {
+      display: none; /* Hide this image on mobile */
+  }
+
+  .image-to-hide {
+      display: block; /* Show this image on mobile */
+  }
+}
+
+/* Media query for larger devices */
+@media (min-width: 769px) {
+  .image-to-show {
+      display: block; /* Show this image on larger devices */
+  }
+
+  .image-to-hide {
+      display: none; /* Hide this image on larger devices */
+  }
 }
